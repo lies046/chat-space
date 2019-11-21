@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## usersテーブル
+## userテーブル
   |Column|Type|Options|
   |------|----|-------|
   |name|integer|null: false, foreign_key: true|
@@ -32,29 +32,30 @@ Things you may want to cover:
 
 ### Association
  - has_many :chat
- - has_many :image
+ - has_many :group
+ - has_many :group, through: :groups_users
 
  ## chatテーブル
  |Column|Type|Options|
  |------|----|-------|
  |text|integer|null:false, foreign_key: true|
- |image_id|integer|null:false, foreign_key: true|
- |users_id|integer|null:false, foreign_key: true|
+ |image|string|null:false, foreign_key: true|
+ |user_id|integer|null:false, foreign_key: true|
  |group_id|integer|null: false, foreign_key: true|
 
   ### Association
  - belongs_to :users
- - belongs_to :image
+ - belongs_to :groups
 
- ## imageテーブル
- |Column|Type|Options|
- |------|----|-------|
- |chat_id|integer|null: false, foreign_key: true|
- |users_id|integer|null: false, foreign_key: true|
+ ## groupテーブル
+ Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
-  ### Association
- - belongs_to :users
- - has_many :users 
+- has_many :user
+- has_many :chat
+- has_many :user, through: :groups_users
 
 ## groups_usersテーブル
 
@@ -64,5 +65,6 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :users
+- belongs_to :groups
+- 
