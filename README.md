@@ -23,10 +23,10 @@ Things you may want to cover:
 
 * ...
 
-## userテーブル
+## usersテーブル
   |Column|Type|Options|
   |------|----|-------|
-  |name|integer|null: false|
+  |name|string|null: false|
   |email|integer|null: false|
   |password|integer|null: false|
 
@@ -35,10 +35,10 @@ Things you may want to cover:
  - has_many :groups, through: :groups_users
  - has_many :groups_users
 
- ## chatテーブル
+ ## chatsテーブル
  |Column|Type|Options|
  |------|----|-------|
- |text|integer||
+ |text|string||
  |image|string||
  |user_id|integer|null:false, foreign_key: true|
  |group_id|integer|null: false, foreign_key: true|
@@ -47,14 +47,14 @@ Things you may want to cover:
  - belongs_to :user
  - belongs_to :group
 
- ## groupテーブル
+ ## groupsテーブル
  Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 
 - has_many :groups_users
 - has_many :users, through: :groups_users
+- has_many :chats, through: :groups_users
 
 ## groups_usersテーブル
 ## 中間テーブル
