@@ -12,30 +12,30 @@
   border-bottom: solid 1px #eee;
   overflow: scroll;
 
-
 &__left-box{
   margin-top: 35px ;
-}
 
-&__left-box__current-group{
+&__current-group{
   font-size: 20px;
   color: #333;
   margin-bottom: 15px;
 }
 
-&__left-box__menber-list{
+&__menber-list{
   display: inline;
   font-size: 12px;
   color: #999999;
-}
 
-&__left-box__menber-list__menber{
+&__menber{
 display: inline;
 margin: 0;
 padding: 0;
 color: #999999;
 font-size: 12px;
-}}
+      }
+    }
+  }
+}
 
 .main-header__edit-btn{
   height: 40px;
@@ -57,29 +57,28 @@ font-size: 12px;
 .message{
   padding-bottom: 40px;
 
-
 &__upper-info{
   display: flex;
   margin-bottom: 10px;
-}
 
-&__upper-info__talker{
+&__talker{
   color: #434a54;
   font-size: 16px;
   font-weight: bold;
 }
 
-&__upper-info__date{
+&__date{
   color: #999999;
   font-size: 12px;
   margin-left: 10px;
+  }
 }
 
 &__text{
   color: #434a54;
   font-size: 14px;
   margin-bottom: 10px;
-}
+  }
 }
 
 .form {
@@ -87,9 +86,9 @@ font-size: 12px;
   box-sizing: border-box;
   height: 90px;
   padding: 20px 40px;
-}
 
-.form__message {
+
+&__message {
   border: none;
   float: left;
   height: 50px;
@@ -108,7 +107,7 @@ font-size: 12px;
 .hidden {
     display: none;
   }
-.form__submit {
+&__submit {
   background-color: #38AEF0;
   border: none;
   color: white;
@@ -117,5 +116,6 @@ font-size: 12px;
   height: 50px;
   margin-left: 15px;
   padding: 0 30px;
+  }
 }
 
