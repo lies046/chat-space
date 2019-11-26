@@ -1,3 +1,2 @@
-def new
-  @group = Group.new
+class GroupsController < ApplicationController
 end
