@@ -1,5 +1,6 @@
 li{
   list-style: none;
+  display: inline;
 }
 
 .side-bar{
@@ -30,7 +31,7 @@ li{
 }
 
   &__menu{
-  display:flex;
+    display: inline-block;
 }
 
  &__config{
