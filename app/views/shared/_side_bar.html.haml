@@ -5,14 +5,17 @@
         = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__edit
-          = link_to icon('fas', ' fa-edit'),"https://twitter.com/"
+          = link_to new_group_path do
+            =icon('fas', ' fa-edit')
         %li.side-header__box__menu__config
           = link_to edit_user_path(current_user)  do
             = icon('fas', ' fa-cog')
 
   .groups
-    .group
-      .group__group-name
-        %p test
-      .group-latest-message
-        %p こんにちは
+    - current_user.groups.each do |group|
+      .group
+      = link_to group_messages_path(group) do
+        .group__group-name
+          = group.name
+        .group-latest-message
+          メッセージはまだありません。
