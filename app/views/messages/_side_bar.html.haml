@@ -1,19 +1,18 @@
 .side-bar
- .side-header
-  .side-header__box
-   .side-header__box__user
-    %p ito
-  %ul.side-header__box__menu
-  
-  %li.side-header__box__menu__edit
-  = link_to icon('fas', ' fa-edit'),"https://twitter.com/"
+  .side-header
+    .side-header__box
+      .side-header__box__user
+        = current_user.name
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__edit
+          = link_to icon('fas', ' fa-edit'),"https://twitter.com/"
+        %li.side-header__box__menu__config
+          = link_to edit_user_path(current_user)  do
+            = icon('fas', ' fa-cog')
 
-  %li.side-header__box__menu__config
-  = link_to icon('fas', ' fa-cog'), "https://www.facebook.com/"
-
- .groups
-  .group
-   .group__group-name
-    %p test
-   .group-latest-message
-    %p こんにちは
+  .groups
+    .group
+      .group__group-name
+        %p test
+      .group-latest-message
+        %p こんにちは
