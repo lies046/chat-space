@@ -94,14 +94,20 @@
     height: 50px;
     width: calc(100% - 150px);
     padding: 0 40px 0 10px;
-    position: relative;
+    // position: relative;
 }
 
-.input-box__image {
+.form_mask{
+  background-color: white;
+  float: left;
+  height: 50px;
+  // padding-right: 10px;
+}
+
+.form__mask__image{
   font-size: 20px;
   line-height: 50px;
   position: absolute;
-  background-color:white;
   right:200px;
 }
 
@@ -119,4 +125,3 @@
     padding: 0 30px;
   }
 }
-
