@@ -31,11 +31,11 @@ Things you may want to cover:
   |password|integer|null: false|
 
 ### Association
- - has_many :chats
+ - has_many :messages
  - has_many :groups, through: :groups_users
  - has_many :groups_users
 
- ## chatsテーブル
+ ## messagesテーブル
  |Column|Type|Options|
  |------|----|-------|
  |text|string||
@@ -54,7 +54,7 @@ Things you may want to cover:
 
 - has_many :groups_users
 - has_many :users, through: :groups_users
-- has_many :chats
+- has_many :messages
 
 ## groups_usersテーブル
 ## 中間テーブル
