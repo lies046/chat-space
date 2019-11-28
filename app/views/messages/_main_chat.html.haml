@@ -4,14 +4,15 @@
     .main-header__left-box
 
       .main-header__left-box__current-group
-        %p test
+        =@group.name
       %ul
         %li.main-header__left-box__menber-list
           menber:
         %li.main-header__left-box__menber-list__menber
-          伊藤
+          - @group.users.each do |member|
+            = member.name
     .main-header__edit-btn
-      %p Edit
+      = link_to 'Edit' , edit_group_path(@group.id)
     
   .messages
     = render @messages
