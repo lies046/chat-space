@@ -74,7 +74,11 @@
   }
 }
 
-  &__text{
+  .lower__message{
+    margin-top:10px;
+   }
+
+   .lower-message__content{
     color: #434a54;
     font-size: 14px;
     margin-bottom: 10px;
