@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #eee;
-  overflow: scroll;
+  // overflow: scroll;
 
   &__left-box{
     margin-top: 35px ;
@@ -42,9 +42,13 @@
     padding: 0 20px;
     margin-top: 30px;
     border: solid 1px #38aef0;
-    position: absolute;
+    // position: absolute;
     right: 40px;
   }
+}
+.Editlink{
+  color:#38aef0;
+  text-decoration:none;
 }
 
 .messages{
